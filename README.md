@@ -1,11 +1,14 @@
 # Netflix Gpt
 
-    - Header
-    - Routing
-    - Login Form
-    - Sign Form
-    - form validation 
-    - useRef Hook
+  - Header
+  - Routing
+  - Login Form
+  - Sign Form
+  - form validation 
+  - useRef Hook7
+  - firebase setup
+  - deploying app in production
+  - create signup user account 
 
 # features
 
