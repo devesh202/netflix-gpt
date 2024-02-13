@@ -1,16 +1,22 @@
 # Netflix Gpt
 
-  - Header
-  - Routing
-  - Login Form
-  - Sign Form
-  - form validation 
-  - useRef Hook7
-  - firebase setup
-  - deploying app in production
-  - create signup user account 
-  - Implement sign in user Api
-  -Created redux store with userSlice
+- Header
+- Routing
+- Login Form
+- Sign Form
+- form validation
+- useRef Hook7
+- firebase setup
+- deploying app in production
+- create signup user account
+- Implement sign in user Api
+- Created redux store with userSlice
+- implement sign out
+- update profile
+- bugix : sign up user display name and profile picture update
+- Bugfix : if user not logged in redirect /browse to login page and viceversa
+- unsubscribed to unauthstatechange callback
+
 
 # features
 

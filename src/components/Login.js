@@ -3,9 +3,10 @@ import Header from "./Header";
 import {checkValidData} from "../utils/validate";
 import {auth} from "../utils/firebase";
 import {  createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
-
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { userAvatar } from "../utils/constants";
 
 
 
@@ -14,7 +15,7 @@ import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const dispatch = useDispatch();
-  
+  const navigate = useNavigate();
 
  
 
@@ -41,7 +42,7 @@ const Login = () => {
             console.log(user)
             // update user
             updateProfile(user, {
-              displayName: name.current.value, photoURL: "https://media-bom2-2.cdn.whatsapp.net/v/t61.24694-24/347079096_1331163274499131_7707905829610123584_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdTVllkHq0Pt1eOlvGzAhz1LH1V4P4XvHFa481J70oqcng&oe=65D59065&_nc_sid=e6ed6c&_nc_cat=108"
+              displayName: name.current.value, photoURL: userAvatar
             }).then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
   
