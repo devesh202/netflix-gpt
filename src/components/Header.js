@@ -11,7 +11,7 @@ const Header = () => {
   const navigate = useNavigate();
   const user = useSelector(store => store.user)
   const handleSignOut = () => {
-    
+    console.log('Sign out')
     signOut(auth).then(() => {
       // Sign-out successful.
       navigate("/")
@@ -45,13 +45,13 @@ const Header = () => {
     }, []);
   
   return (
-    <div className="flex justify-between absolute px-8 py-2 lg:h-fit lg:bg-gradient-to-b lg:from-black z-1 lg:w-screen   ">
-        <img className="w-28 lg:w-44 " src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" 
+    <div className="flex justify-between absolute px-8 py-2 lg:h-fit lg:bg-gradient-to-b lg:from-black z-1 lg:w-screen">
+        <img className="w-28 lg:w-44 z-50" src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" 
          alt='logo'/>
          {user 
          && <div className="flex items-center gap-5"> 
           <img className="w-12 h-12 rounded-full" src={user.photoURL} alt="" />
-          <button onClick={handleSignOut} className="text-white font-bold bg-red-400 h-fit ">Sign Out</button>
+          <button onClick={handleSignOut} className="text-white font-bold h-fit hover:cursor-pointer">Sign Out</button>
          </div>}
     </div>
   )

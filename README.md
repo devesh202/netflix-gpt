@@ -16,6 +16,7 @@
 - bugix : sign up user display name and profile picture update
 - Bugfix : if user not logged in redirect /browse to login page and viceversa
 - unsubscribed to unauthstatechange callback
+- created movie slice 
 
 
 # features
