@@ -7,7 +7,7 @@ const Maincontainer = () => {
   //data of movie will come from store ie subscribing store for movie
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
   if (movies === null) return;
-  const mainMovie = movies[0];
+  const mainMovie = movies[Math.floor((Math.random() * 20) + 1)];
 
   console.log(mainMovie);
   const { original_title, overview, id } = mainMovie;

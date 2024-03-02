@@ -13,7 +13,7 @@ const VideoBg = ({ movieId }) => {
       <iframe
         src={"https://www.youtube.com/embed/" + trailerVideo?.key+ "?&autoplay=1&mute=1"}
         title="YouTube video player"
-        className="w-full aspect-video"
+        className="w-full aspect-video mb-40"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
       />
     </div>

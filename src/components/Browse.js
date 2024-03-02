@@ -1,39 +1,38 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
 import { API_OPTIONS } from "../utils/constants";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addNowPlayingMovies } from "../utils/movieSlice";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import Maincontainer from "./Maincontainer";
+import SecondaryContainer from "./SecondaryContainer";
+import usePopularMovies from "../hooks/usePopularMovies";
+import useTopRatedMovies from "../hooks/useTopRatedMovies";
+import GptSearch from "./GptSearch";
 
 const Browse = () => {
-  //fetch data from tmdb api and update store
-  // const dispatch = useDispatch()
-  // const getNowPlayingMovies = async () => {
-  //   const data = await fetch("https://api.themoviedb.org/3/movie/now_playing?page=1", API_OPTIONS);
-  //   const json = await data.json();
-  //   console.log(json?.results);
-  //   dispatch(addNowPlayingMovies(json.results))
-  // };
-  // useEffect(() => {
-  //   getNowPlayingMovies();
-  // },[])
+  const showGptSearch = useSelector((store)=>store.gpt.showGptSearch);
+  
+
   //calling custom hook
   useNowPlayingMovies();
+  usePopularMovies();
+  useTopRatedMovies();
   return (
     <div>
-
+ 
       <Header />
-      {/* maincontainer
-      
-
-      - videobg
-      - videotitle
-      secondarycontiner
-       - movielist*n 
-       - cards*n */}
-       <Maincontainer/>
+      {showGptSearch?(
+      <GptSearch/>):
+      <>
+        <Maincontainer/>
+        <SecondaryContainer/>
+      </>
+    }
+    
        
+       
+      
 
 
     </div>
