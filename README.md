@@ -17,6 +17,10 @@
 - Bugfix : if user not logged in redirect /browse to login page and viceversa
 - unsubscribed to unauthstatechange callback
 - created movie slice 
+- Gpt Search Page 
+- Gpt search Bar 
+- multi language feature in our app 
+- adding gpt search feature in our app
 
 
 # features
